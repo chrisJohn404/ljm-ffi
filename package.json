@@ -24,20 +24,20 @@
         "lib"
     ],
     "dependencies": {
-        "async": "3.2.3",
-        "ffi-napi": "4.0.3",
-        "ljswitchboard-ljm_driver_constants": "^1.0.0",
-        "ljswitchboard-modbus_map": "^1.0.1",
-        "q": "1.5.1",
-        "ref-napi": "3.0.3",
-        "semver": "7.3.7"
+        "async": "https://github.com/chrisJohn404/async.git",
+        "ffi-napi": "https://github.com/chrisJohn404/node-ffi-napi.git",
+        "ljswitchboard-ljm_driver_constants": "https://github.com/chrisJohn404/ljswitchboard-ljm_driver_constants.git",
+        "ljswitchboard-modbus_map": "https://github.com/chrisJohn404/ljswitchboard-modbus_map.git",
+        "q": "https://github.com/chrisJohn404/q.git",
+        "ref-napi": "https://github.com/chrisJohn404/ref-napi.git",
+        "semver": "https://github.com/chrisJohn404/node-semver.git"
     },
     "devDependencies": {
-        "colors": "1.4.0",
-        "diff": ">=3.5.0",
-        "extend": "^3.0.2",
+        "colors": "https://github.com/chrisJohn404/colors.js.git#v1.4.0",
+        "diff": "https://github.com/chrisJohn404/jsdiff.git",
+        "extend": "https://github.com/chrisJohn404/node-extend.git",
         "nodeunit": "https://github.com/chrisJohn404/nodeunit.git",
-        "rewire": "^6.0.0"
+        "rewire": "https://github.com/chrisJohn404/rewire.git"
     },
     "script_notes": "to run a script w/o using npm test, use npm run [script name]",
     "scripts": {
