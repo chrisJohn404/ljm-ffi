@@ -1,6 +1,6 @@
 {
     "name": "ljm-ffi",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "description": "nodejs library for using the LabJackM library",
     "author": {
         "name": "Chris Johnson",
@@ -12,7 +12,8 @@
         "LabJack",
         "LJMMM",
         "MODBUS",
-        "T7"
+        "T7",
+        "T4"
     ],
     "homepage": "https://github.com/chrisJohn404/ljm-ffi",
     "repository": {
@@ -23,19 +24,19 @@
         "lib"
     ],
     "dependencies": {
-        "async": "1.5.2",
-        "ffi-napi": "2.4.6",
+        "async": "3.2.3",
+        "ffi-napi": "4.0.3",
         "ljswitchboard-ljm_driver_constants": "^1.0.0",
         "ljswitchboard-modbus_map": "^1.0.1",
         "q": "1.5.1",
-        "ref-napi": "^1.4.3",
-        "semver": "^7.1.1"
+        "ref-napi": "3.0.3",
+        "semver": "7.3.7"
     },
     "devDependencies": {
         "colors": "1.4.0",
         "diff": ">=3.5.0",
-        "nodeunit": "0.11.3",
-        "rewire": "4.0.1"
+        "nodeunit": "https://github.com/chrisJohn404/nodeunit.git",
+        "rewire": "^6.0.0"
     },
     "script_notes": "to run a script w/o using npm test, use npm run [script name]",
     "scripts": {
@@ -43,6 +44,6 @@
         "start": "node ./examples/hello_world.js"
     },
     "engines": {
-        "node": ">=6.0.0"
+        "node": ">=10.0.0"
     }
 }

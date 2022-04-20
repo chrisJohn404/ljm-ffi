@@ -13,6 +13,9 @@ var ARCH_DOUBLE_NUM_BYTES = driver_const.ARCH_DOUBLE_NUM_BYTES;
 var ARCH_POINTER_SIZE = driver_const.ARCH_POINTER_SIZE;
 
 
+/*
+ * Function that performs generic 'node' type casting and parsing of variables.
+ */
 function testValues(test, userVal, expVal, type, size, expErr) {
 	var throwsError = false;
 	try {
@@ -25,7 +28,6 @@ function testValues(test, userVal, expVal, type, size, expErr) {
 				size * userVal.length,
 				'Array size should be size * array.length'
 			);
-
 			buf = ljTypeOps[type].fill(buf, userVal);
 			finalVal = ljTypeOps[type].parse(buf);
 			test.deepEqual(expVal, finalVal, 'type: '+type+' should be equal');
@@ -33,6 +35,19 @@ function testValues(test, userVal, expVal, type, size, expErr) {
 			buf = ljTypeOps[type].allocate(userVal);
 			test.equal(buf.length, size, 'type: '+type+' buffer should be 1 byte long');
 
+			buf = ljTypeOps[type].fill(buf, userVal);
+			finalVal = ljTypeOps[type].parse(buf);
+			test.equal(expVal, finalVal, 'type: '+type+' should be equal');
+		} else {
+			buf = ljTypeOps[type].allocate(userVal);
+			// node-ffi does not require non-array types to be sent as buffers
+			// so the test.equal check verifying a data type's size is
+			// commented out.  Left here in case library api changes.
+			// test.equal(
+			// 	buf.length,
+			// 	size,
+			// 	'Datatype "'+type+'" has wrong defined size.'
+			// );
 			buf = ljTypeOps[type].fill(buf, userVal);
 			finalVal = ljTypeOps[type].parse(buf);
 			test.equal(expVal, finalVal, 'type: '+type+' should be equal');
