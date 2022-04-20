@@ -35,6 +35,7 @@
     "devDependencies": {
         "colors": "1.4.0",
         "diff": ">=3.5.0",
+        "extend": "^3.0.2",
         "nodeunit": "https://github.com/chrisJohn404/nodeunit.git",
         "rewire": "^6.0.0"
     },
