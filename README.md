@@ -1,3 +1,4 @@
+NOTE: 5/2/2022: Noticed that I accidentally pushed something to master that broke LJM calls on windows.  Working.....
 # ljm-ffi
 The ljm-ffi node module provides bindings to LabJack's [LJM library](http://labjack.com/ljm) via the [ffi](https://github.com/node-ffi/node-ffi) library.  This library provides three different ways to access the library and makes both synchronous and asynchronous methods available for each.
 
